@@ -3,10 +3,67 @@
 ---
 
 <article>
-    <a href="/forside_vesterbro">JOJO VESTERBRO</a>
-    <a href="/forside_norrebro">JOJO NØRREBRO</a>
+    <div class="lokation">
+        <div>
+            <a href="/forside_vesterbro">JOJO VESTERBRO</a>
+        </div>
+        <div class="adresse">
+            <p class="gade">SUNDEVEDSGADE 4</p>
+            <p>1751 KOBENHAVN V</p>
+        </div>
+    </div>
+    <div class="lokation">
+        <div>
+            <a href="/forside_norrebro">JOJO NORREBRO</a>
+        </div>
+        <div class="adresse">
+            <p class="gade">RAVNSBORGGADE</p>
+            <p>2200 KOBENHAVN N</p>
+        </div>
+    </div>
 </article>
 
 <style>
-    
+    body{
+        background-image: url("baggrund.webp");
+        background-size: cover;
+    }
+    a{
+        font-family: "GT Zirkon Trial", sans-serif;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 140px;
+        font-weight: bold;
+        opacity: 50%;
+    }
+    a:hover{
+        opacity: 100%;
+    }
+
+    p{
+        font-family: "GT Zirkon Trial", sans-serif;
+        color: #ffffff; 
+        font-weight: bold;
+        opacity: 50%;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .lokation{
+        display: flex;
+        gap: 40px;
+        padding-bottom: 30px;
+    }
+
+    .gade{
+        padding-top: 25px;
+    }
+
+    article{
+        margin-top: 16%;
+    }
+
+    .adresse{
+        text-align: right;
+    }
 </style>
