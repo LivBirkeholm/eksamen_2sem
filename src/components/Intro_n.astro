@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>JOJO NØRREBRO</h1>
+    <img src="../forside2.webp" alt="Forside billede">
+    </div>
+    
+    <style>
+    .container {
+        margin-top: 70px;
+      position: relative;
+      text-align: center; 
+    }
+    
+    img {
+      width: 450px;
+      display: block; 
+      margin: 0 auto;
+    }
+    
+    .container h1 {
+      position: absolute;
+      top: 40%; 
+      left: 50%;
+      transform: translate(-50%, -50%); 
+      z-index: 1; 
+      font-size: 85px; 
+      white-space: nowrap; 
+    }
+    
+    @media (max-width: 800px){
+        img {
+      width: 320px
+        }
+    
+        .container h1 {
+    font-size: 60px;
+        }
+    
+    }
+    </style>

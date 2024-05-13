@@ -1,0 +1,77 @@
+<article>
+    <div class="grid-container">
+      <div class="grid_2">
+        <img src="../some2.png" alt="drink">
+      </div>
+      <div class="grid_2">
+        <div class="links">
+          <a href="https://www.instagram.com/jojovesterbro/">INSTAGRAM: @jojonorrebro</a>
+          <a href="https://www.instagram.com/jojovesterbro/">TIKTOK: @jojovnorrebro</a>
+          <a href="https://www.instagram.com/jojovesterbro/">FACEBOOK: @jojonorrebro</a>
+        </div>
+        <h2>WALK IN ONLY</h2>
+      </div>
+    </div>
+  </article>
+
+    <style>
+     article {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  gap: 80px;
+}
+
+.grid_2 {
+  flex: 1; 
+}
+
+img {
+  max-width: 100%; 
+  width: 80%;
+}
+
+.links {
+  text-align: right;
+}
+
+.links a {
+  display: block; 
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 35px;
+  white-space: nowrap; 
+}
+
+h2 {
+    display: block;
+    text-align: right;
+    font-size: 35px;
+}
+
+@media (max-width: 800px){
+    .grid-container {
+    flex-direction: column;
+    text-align: center; 
+  }
+
+  .grid_2 img {
+    width: 60%; 
+    max-width: 100%; 
+}
+
+.links a {
+    font-size: 30px;
+}
+h2 {
+    font-size: 30px;
+}
+}
+    </style>
+
