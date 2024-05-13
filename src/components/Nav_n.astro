@@ -1,14 +1,14 @@
 ---
-
+import "../main/MainStyles2.css";
 ---
 
 <article class="grid_1">
     <div>
-        <a href="/">LOGO</a>
+       <a href="/"><img src="/public/logo2.webp" alt="Logo"></a>
     </div>
     <div>
-        <a href="/menu_norrebro">MENU</a>
-        <a href="/about_norrebro">ABOUT</a>
+        <a class="menu" href="/menu_vesterbro">MENU</a>
+        <a class="about" href="/about_vesterbro">ABOUT</a>
     </div>
 </article>
 
@@ -17,5 +17,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .menu, .about{
+        font-family: "GT Zirkon Trial", sans-serif;
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .menu{
+        padding-right: 40px;
+    }
+
+    img{
+        width: 50%;
     }
 </style>
