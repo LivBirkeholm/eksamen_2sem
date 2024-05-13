@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #0045c2;
+  --secondary-color: #ffffff;
+  --tertiary-color: #fd3f38;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: var(--primary-color);
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+h1,
+h3,
+h4 {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+
+p {
+  color: var(--secondary-color);
+  font-weight: lighter;
+}
