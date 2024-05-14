@@ -23,14 +23,17 @@ h3,
 h4 {
   color: var(--secondary-color);
   font-weight: bold;
+  font-family: "GT Zirkon Trial", sans-serif;
 }
 
 h2 {
   color: var(--tertiary-color);
   font-weight: bold;
+  font-family: "GT Zirkon Trial", sans-serif;
 }
 
 p {
   color: var(--secondary-color);
   font-weight: lighter;
+  font-family: "GT Zirkon Trial", sans-serif;
 }
