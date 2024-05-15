@@ -6,10 +6,37 @@ import Overskrift_v from "../components/Overskrift_v.astro";
 import Drink_v from "../components/Drink_v.astro";
 import Footer_v from "../components/Footer_v.astro";
 
+const data = await fetch ("https://lmiwyvxotkkhmhlqdmcu.supabase.co/rest/v1/menu", 
+{
+    method:"GET",
+    headers:{
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxtaXd5dnhvdGtraG1obHFkbWN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU2NzgxNTIsImV4cCI6MjAzMTI1NDE1Mn0.zXcwkpZbcyA_j58XAosaYvae-I8pl2_Z2SfeTPsotEE"
+    }
+} 
+).then(res=>res.json());
 ---
 
 <MainLayout_v title="Menu" />
 <Nav_v />
 <Overskrift_v />
-<Drink_v />
+<section class="menu">
+    {data.map(menu=>{
+        return <Drink_v 
+        data={menu}
+        img={menu.image} />
+    })}
+</section>
 <Footer_v />
+
+<style>
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 900px){
+        .menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+    }
+    </style>
