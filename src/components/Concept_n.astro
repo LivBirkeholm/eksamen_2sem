@@ -7,12 +7,12 @@
         <h2>ABOUT US</h2>
     </div>
 
-    <div>
+    <div class="pil_container">
         <a href="/forside_norrebro"><img class="pil" src="/public/pil_n.webp" width="61" height="38" alt="billede af en pil"></a>
     </div>
 
     <div class="tekst">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente perspiciatis laborum vero dolorum, pariatur laudantium magni nesciunt ratione dignissimos minima, reprehenderit voluptates corrupti illo veritatis laboriosam. Modi, cum repudiandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos obcaecati a nostrum pariatur amet, quibusdam veniam placeat voluptatibus dolor vero corporis. Non tempore ipsa aliquid molestias beatae ipsam magnam sunt.</p>
+    <p>Welcome to JOJO Cocktailbar - where we elevate the cocktail experience in the heart of Copenhagen! Following our success on Vesterbro, we've expanded to Nørrebro, celebrating our commitment to spreading the best cocktail experience across Copenhagen. Enjoy our handcrafted cocktails for just 50 DKK in our cozy atmosphere, perfect for sharing moments with friends and new acquaintances. Join us at JOJO Cocktailbar and experience our passion for cocktails and lively atmosphere!"</p>
     </div>
 </article>
 
@@ -37,12 +37,14 @@ p{
     line-height: 2;
 }
 
-.pil{
+.pil_container{
     padding-top: 1.5%;
-    padding-left: 17%;
+    padding-left: 7%;
+}
+.pil{
     margin: 0;
-    width: 20%;
-    height: 20%;
+    width: 3%;
+    height: 0%;
 }
 .overskrift{
     padding-top: 100px;
@@ -53,6 +55,29 @@ p{
     text-align: center;
     padding-left: 14%;
     padding-right: 14%;
+}
+
+@media (max-width: 800px){
+
+h1{
+   font-size: 50px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+.overskrift{
+    padding-top: 65px;
+}
+p{
+    font-size: 15px;
+}  
+
+.pil{
+   display: none;
+}
+
 }
 
 </style>

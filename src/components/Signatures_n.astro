@@ -50,6 +50,7 @@
 .drinks_pris{
   color: var(--tertiary-color);
 }
+
 h1{
     font-size: 120px;
     margin: 0;
@@ -69,6 +70,37 @@ h3{
 
 .drinks_info{
     padding-top: 20px;
+}
+
+@media (max-width: 800px){
+  .grid_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid: 6%;
+    margin: 50px;
+  }
+
+  .tekst{
+    margin-top: 200px;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+  h1{
+    font-size: 50px;
+  }
+  
+  h2{
+    font-size: 24px;
+  }
+
+  h3{
+    font-size: 15px;
+  }
+
+  .drinks_info{
+    padding-top: 10px;
+}
 }
 
 </style>

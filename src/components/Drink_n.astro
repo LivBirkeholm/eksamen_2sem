@@ -1,25 +1,22 @@
 ---
-
+const {data} = Astro.props;
+console.log(data);
 ---
 
 <article>
     <div>
         <img src="../drink.png" width="" height="" alt="drink">
         <div class="drinks_info">
-          <h2>BASIL SMASH</h2>
-          <h3>Lime, Cola & Vodka </h3>
+          <h2>{data.name}</h2>
+          <h3>{data.ingredients}</h3>
         </div>
       </div>
 </article>
 
+
 <style>
 .drinks_info{
     padding-top: 20px;
-}
-
-img{
-    padding-top: 35px;
-    width: 30%;
 }
 
 h2{
@@ -29,6 +26,6 @@ h2{
 }
 
 article{
-    margin: 50px;
+    margin: 30px;
 }
 </style>

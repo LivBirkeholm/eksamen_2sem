@@ -26,7 +26,9 @@
 <style>
     body{
         background-image: url("baggrund.webp");
-        background-size:cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+       background-attachment: fixed;
     }
     a{
         font-family: "GT Zirkon Trial", sans-serif;
@@ -49,21 +51,68 @@
         margin: 0;
     }
 
+    article{
+        margin-top: 16%;
+    }
+
+    @media (min-width: 690px){
     .lokation{
-        display: flex;
-        gap: 40px;
-        padding-bottom: 30px;
+    display: flex;
+    gap: 40px;
+    padding-bottom: 30px;
+    }
+
+    .adresse{
+        text-align: right;
     }
 
     .gade{
         padding-top: 25px;
     }
-
-    article{
-        margin-top: 16%;
     }
 
-    .adresse{
-        text-align: right;
+
+    @media (max-width: 1200px){
+        a{
+            font-size: 90px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 1000px){
+        a{
+            font-size: 80px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 900px){
+        a{
+            font-size: 60px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 690px){
+        a{
+            font-size: 60px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        .lokation{
+            padding-top: 40px;
+        }
     }
 </style>

@@ -5,10 +5,38 @@ import Nav_n from "../components/Nav_n.astro";
 import Overskrift_n from "../components/Overskrift_n.astro";
 import Drink_n from "../components/Drink_n.astro";
 import Footer_n from "../components/Footer_n.astro";
+
+const data = await fetch ("https://lmiwyvxotkkhmhlqdmcu.supabase.co/rest/v1/menu", 
+{
+    method:"GET",
+    headers:{
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxtaXd5dnhvdGtraG1obHFkbWN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU2NzgxNTIsImV4cCI6MjAzMTI1NDE1Mn0.zXcwkpZbcyA_j58XAosaYvae-I8pl2_Z2SfeTPsotEE"
+    }
+} 
+).then(res=>res.json());
 ---
 
-<MainLayout_n />
+<MainLayout_n title="Menu"/>
 <Nav_n />
 <Overskrift_n />
-<Drink_n />
+<section class="menu">
+    {data.map(menu=>{
+        return <Drink_n 
+        data={menu}
+        img={menu.image} />
+    })}
+</section>
 <Footer_n />
+
+<style>
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 900px){
+        .menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+    }
+    </style>
