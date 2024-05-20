@@ -1,11 +1,11 @@
 ---
-const {data} = Astro.props;
+const {data, img} = Astro.props;
 console.log(data);
 ---
 
 <article>
     <div>
-        <img src="../drink.png" width="" height="" alt="drink">
+        <img src={img} alt="">
         <div class="drinks_info">
           <h2>{data.name}</h2>
           <h3>{data.ingredients}</h3>
@@ -26,6 +26,6 @@ h2{
 }
 
 article{
-    margin: 30px;
+    margin: 40px;
 }
 </style>
