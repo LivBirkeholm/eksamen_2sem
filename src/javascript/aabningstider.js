@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate-right-h1"); // Tilføj animationsklassen når elementet er i viewporten
+          entry.target.classList.add("animate-right-h1");
         }
       });
     },
