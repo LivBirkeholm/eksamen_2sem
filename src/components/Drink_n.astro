@@ -7,12 +7,12 @@ console.log(hoverImg);
 
 <article>
     <div class="image-container">
+        <h3>{data.ingredients}</h3>
         <img src={img} alt="default image" class="default-img">
         <img src={hoverImg} alt="hover image" class="hover-img">
     </div>
     <div class="drinks_info">
         <h2>{data.name}</h2>
-        <h3>{data.ingredients}</h3>
     </div>
 </article>
 
@@ -55,7 +55,12 @@ h2 {
     color: var(--secondary-color);
 }
 
+h3{
+    text-align: center;
+    padding-top: 40%;
+    font-size: 30px;
+}
 article {
-    margin: 40px;
+    margin: 20px;
 }
 </style>
