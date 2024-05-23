@@ -6,6 +6,7 @@ console.log(hoverImg);
 ---
 
 <article>
+    <div class="center">
     <div class="image-container">
         <h3>{data.ingredients}</h3>
         <img src={img} alt="default image" width="500" height="500" class="default-img">
@@ -14,13 +15,26 @@ console.log(hoverImg);
     <div class="drinks_info">
         <h2>{data.name}</h2>
     </div>
+</div>
 </article>
 
 <style>
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+article img {
+    align-items: center;
+    margin-top: 30px;
+}
+
     .image-container {
         position: relative;
-        width: 350px;
-        height: 350px;
+        width: 450px;
+        height: 450px;
     }
     
     .default-img, .hover-img {
@@ -32,6 +46,7 @@ console.log(hoverImg);
         transition: opacity 0.3s ease;
         object-fit: cover;
         z-index: 1;
+    
     }
     
     .hover-img {
@@ -61,7 +76,6 @@ console.log(hoverImg);
     }
     
     .drinks_info {
-        text-align: center; 
     padding-top: 20px;
     }
     
@@ -69,9 +83,12 @@ console.log(hoverImg);
         font-size: 35px;
         margin: 0;
         color: var(--secondary-color);
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
     
     article {
         margin: 20px;
     }
     </style>
+
