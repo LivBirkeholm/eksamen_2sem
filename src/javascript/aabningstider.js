@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate-right-h1");
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.8 }
-  ); // Ændre tærskelværdien til 0,8
+    { threshold: 0.9 }
+  );
 
   elements.forEach((element) => {
     observer.observe(element);
