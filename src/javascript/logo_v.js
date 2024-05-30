@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (currentPage.includes("/menu_vesterbro") || currentPage.includes("/about_vesterbro")) {
     logoLink.href = "/forside_vesterbro";
   } else if (currentPage === "/forside_vesterbro") {
-    logoLink.href = "/";
+    logoLink.href = "index.html";
   } else {
-    logoLink.href = "/";
+    logoLink.href = "index.html";
   }
 });
